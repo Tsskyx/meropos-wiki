@@ -1,22 +1,24 @@
+/* Base styles */
 body {
   margin: 0;
   font-family: 'Georgia', serif;
-  background: #f4f1ed; /* light beige */
+  background: #f4f1ed;
   color: #2e2b2b;
-  display: flex; /* ensure sidebar and main are side by side */
-  min-height: 100vh;
+  display: flex;            /* Flex to align sidebar + main horizontally */
+  min-height: 100vh;        /* Ensure full height */
 }
 
-/* Sidebar styles now match <aside id="sidebar"> */
+/* Sidebar */
 #sidebar {
   width: 250px;
   background: #3d2c2c;
   color: #fff;
   padding: 20px;
   box-sizing: border-box;
+  flex-shrink: 0;           /* Prevent sidebar from shrinking */
 }
 
-/* Optional: style for sidebar headings, if any */
+/* Sidebar styles */
 #sidebar h1 {
   font-size: 1.5em;
   margin-bottom: 1em;
@@ -24,7 +26,6 @@ body {
   padding-bottom: 10px;
 }
 
-/* Navigation inside sidebar */
 #sidebar nav ul {
   list-style: none;
   padding: 0;
@@ -44,9 +45,9 @@ body {
   text-decoration: underline;
 }
 
-/* Main content area styles */
+/* Main content */
 main {
-  flex-grow: 1;
+  flex: 1;                     /* Take remaining horizontal space */
   padding: 30px;
   background: #fff;
   box-sizing: border-box;
