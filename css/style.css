@@ -1,24 +1,23 @@
-/* Base styles */
+/* Layout for full-height side-by-side */
 body {
   margin: 0;
   font-family: 'Georgia', serif;
   background: #f4f1ed;
   color: #2e2b2b;
-  display: flex;            /* Flex to align sidebar + main horizontally */
-  min-height: 100vh;        /* Ensure full height */
+  display: flex;
+  min-height: 100vh;
 }
 
-/* Sidebar */
+/* Sidebar styling */
 #sidebar {
   width: 250px;
   background: #3d2c2c;
   color: #fff;
   padding: 20px;
   box-sizing: border-box;
-  flex-shrink: 0;           /* Prevent sidebar from shrinking */
+  flex-shrink: 0;
 }
 
-/* Sidebar styles */
 #sidebar h1 {
   font-size: 1.5em;
   margin-bottom: 1em;
@@ -45,14 +44,10 @@ body {
   text-decoration: underline;
 }
 
-/* Main content */
+/* Main content area */
 main {
-  flex: 1;                     /* Take remaining horizontal space */
+  flex: 1;
   padding: 30px;
   background: #fff;
   box-sizing: border-box;
-}
-
-main h2 {
-  margin-top: 0;
 }
