@@ -1,22 +1,10 @@
-main {
-  flex: 1;
-  padding: 2em;
-  background-color: #fff;
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: 'Georgia', serif;
   display: flex;
-  min-height: 100vh; /* Important for full page height */
+  min-height: 100vh;
   background-color: #fef6e4;
   color: #333;
-}
-
-.container {
-  display: flex;
-  min-height: 100vh;
 }
 
 #sidebar {
@@ -25,40 +13,12 @@ body {
   color: #fff;
   padding: 1em;
   box-sizing: border-box;
-  min-height:
+  min-height: 100vh;
 }
 
-.sidebar h1 {
-  font-size: 1.5em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid #fff;
-  padding-bottom: 10px;
-}
-
-.sidebar nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar nav ul li {
-  margin: 10px 0;
-}
-
-.sidebar nav ul li a {
-  color: #f4f1ed;
-  text-decoration: none;
-}
-
-.sidebar nav ul li a:hover {
-  text-decoration: underline;
-}
-
-.content {
-  flex-grow: 1;
-  padding: 30px;
-  background: #fff;
-}
-
-.content h2 {
-  margin-top: 0;
+main {
+  flex: 1;
+  padding: 2em;
+  background-color: #fff;
+  box-sizing: border-box;
 }
