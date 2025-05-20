@@ -1,8 +1,10 @@
 body {
   margin: 0;
   font-family: 'Georgia', serif;
-  background: #f4f1ed;
-  color: #2e2b2b;
+  display: flex;
+  min-height: 100vh; /* Important for full page height */
+  background-color: #fef6e4;
+  color: #333;
 }
 
 .container {
@@ -10,11 +12,13 @@ body {
   min-height: 100vh;
 }
 
-.sidebar {
+#sidebar {
   width: 250px;
-  background: #3D3D3D;
+  background-color: #3D3D3D;
   color: #fff;
-  padding: 20px;
+  padding: 1em;
+  box-sizing: border-box;
+  min-height:
 }
 
 .sidebar h1 {
