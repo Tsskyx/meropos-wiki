@@ -26,11 +26,9 @@ function loadSidebar() {
 function fixSidebarLinks(isGitHub) {
     const links = document.querySelectorAll("#sidebar a");
     const basePath = isGitHub ? "/meropos-wiki/" : "/";
-
     links.forEach(link => {
         const href = link.getAttribute("href");
         if (!href || href.startsWith("http") || href.startsWith("/")) return;
-        // Rewrite the link to be absolute from root
         const fixedHref = basePath + href.replace(/^\/+/, "");
         link.setAttribute("href", fixedHref);
     });
@@ -39,10 +37,14 @@ function fixSidebarLinks(isGitHub) {
 function highlightActiveSidebarLink() {
     const links = document.querySelectorAll("#sidebar a");
     const currentPath = location.pathname.replace(/\/+$/, "");
+    let matched = false;
     links.forEach(link => {
         const linkPath = new URL(link.href).pathname.replace(/\/+$/, "");
         if (linkPath === currentPath) {
             link.classList.add("active");
+            matched = true;
         }
     });
+    if (!matched && links.length > 0)
+        links[0].classList.add("active");
 }
