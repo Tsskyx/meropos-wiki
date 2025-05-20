@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Meropos Wiki</title>
-  <link rel="stylesheet" href="/meropos-wiki/css/style.css"/>
-</head>
-<body>
-  <aside id="sidebar"><!-- Sidebar will load here --></aside>
-  <main>
-      <h2>Locations</h2>
-      <p>(To be added...)</p>
-  </main>
-  <script src="/meropos-wiki/js/main.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Locations</title>
+
+        <!-- Dynamic CSS loader -->
+        <script>
+            const isGitHub = location.hostname.includes("github.io");
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = isGitHub ? "/meropos-wiki/css/style.css" : "../css/style.css";
+            document.head.appendChild(link);
+        </script>
+    </head>
+    <body>
+        <noscript>
+            <div style="padding: 1em; background: #fdd; color: #900;">
+                This site requires JavaScript to display all elements correctly.
+            </div>
+        </noscript>
+
+        <aside id="sidebar"><!-- Sidebar will load here --></aside>
+
+        <main>
+            <h2>Locations</h2>
+            <p>(To be added...)</p>
+        </main>
+
+        <!-- Dynamic JS loader -->
+        <script>
+            const script = document.createElement("script");
+            script.src = isGitHub ? "/meropos-wiki/js/main.js" : "../js/main.js";
+            script.onload = () => loadSidebar(); // Call sidebar loader after script loads
+            document.body.appendChild(script);
+        </script>
+    </body>
 </html>
