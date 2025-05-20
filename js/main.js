@@ -1,37 +1,48 @@
 function loadSidebar() {
-  const sidebarContainer = document.getElementById("sidebar");
-  if (!sidebarContainer) return;
+    const sidebarContainer = document.getElementById("sidebar");
+    if (!sidebarContainer) return;
 
-  const isGitHub = location.hostname.includes("github.io");
-  const isSubpage = location.pathname.includes("/pages/");
-  const sidebarPath = isGitHub
-    ? "/meropos-wiki/sidebar.html"
-    : isSubpage
-      ? "../sidebar.html"
-      : "sidebar.html";
+    const isGitHub = location.hostname.includes("github.io");
+    const isSubpage = location.pathname.includes("/pages/");
+    const sidebarPath = isGitHub
+        ? "/meropos-wiki/sidebar.html"
+        : isSubpage
+            ? "../sidebar.html"
+            : "sidebar.html";
 
-  fetch(sidebarPath)
-    .then(res => {
-      if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
-      return res.text();
-    })
-    .then(html => {
-      sidebarContainer.innerHTML = html;
-      fixSidebarLinks(isGitHub);
-    })
-    .catch(err => console.error("Failed to load sidebar:", err));
+    fetch(sidebarPath)
+        .then(res => {
+            if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+            return res.text();
+        })
+        .then(html => {
+            sidebarContainer.innerHTML = html;
+            fixSidebarLinks(isGitHub);
+            highlightActiveSidebarLink();
+        })
+        .catch(err => console.error("Failed to load sidebar:", err));
 }
 
 function fixSidebarLinks(isGitHub) {
-  const links = document.querySelectorAll("#sidebar a");
-  const basePath = isGitHub ? "/meropos-wiki/" : "/";
+    const links = document.querySelectorAll("#sidebar a");
+    const basePath = isGitHub ? "/meropos-wiki/" : "/";
 
-  links.forEach(link => {
-    const href = link.getAttribute("href");
-    if (!href || href.startsWith("http")) return;
+    links.forEach(link => {
+        const href = link.getAttribute("href");
+        if (!href || href.startsWith("http") || href.startsWith("/")) return;
+        // Rewrite the link to be absolute from root
+        const fixedHref = basePath + href.replace(/^\/+/, "");
+        link.setAttribute("href", fixedHref);
+    });
+}
 
-    // Rewrite the link to be absolute from root
-    const fixedHref = basePath + href.replace(/^\/+/, "");
-    link.setAttribute("href", fixedHref);
-  });
+function highlightActiveSidebarLink() {
+    const links = document.querySelectorAll("#sidebar a");
+    const currentPath = location.pathname.replace(/\/+$/, "");
+    links.forEach(link => {
+        const linkPath = new URL(link.href).pathname.replace(/\/+$/, "");
+        if (linkPath === currentPath) {
+            link.classList.add("active");
+        }
+    });
 }

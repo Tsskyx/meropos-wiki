@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Dynamic script loading for Github pages vs. local server -->
-        <script>
-            const isGitHub = location.hostname.includes("github.io");
-            const link = document.createElement("link");
-            link.rel = "stylesheet";
-            link.href = isGitHub ? "/meropos-wiki/css/style.css" : "css/style.css";
-            document.head.appendChild(link);
-        </script>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Meropos wiki">
         <title>Meropos Wiki</title>
+        <script src="js/loader.js"></script>
+        <script>loadStylesheet();</script>
     </head>
     <body>
         <noscript>
@@ -24,11 +19,6 @@
             <h2>Welcome to the Meropos Wiki!</h2>
             <p>This wiki is a collection of knowledge about Meropos, a fantasy world and series created by <a href="https://www.youtube.com/@camilacuevas">Camila Cuevas</a>.</p>
         </main>
-        <script>
-            const script = document.createElement("script");
-            script.src = isGitHub ? "/meropos-wiki/js/main.js" : "js/main.js";
-            script.onload = () => loadSidebar();
-            document.body.appendChild(script);
-        </script>
+        <script>loadMainJS(() => loadSidebar());</script>
     </body>
 </html>
