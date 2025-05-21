@@ -1,55 +1,12 @@
-const isGitHub = location.hostname.includes("github.io");
-
-function loadSidebar() {
-    const sidebarContainer = document.getElementById("sidebar");
-    if (!sidebarContainer) return;
-
-    const isSubpage = location.pathname.includes("/pages/");
-    const sidebarPath = isGitHub
-        ? "/meropos-wiki/sidebar.html"
-        : isSubpage
-            ? "../sidebar.html"
-            : "sidebar.html";
-
-    fetch(sidebarPath)
-        .then(res => {
-            if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
-            return res.text();
-        })
-        .then(html => {
-            sidebarContainer.innerHTML = html;
-            fixSidebarLinks();
-            highlightActiveSidebarLink();
-        })
-        .catch(err => console.error("Failed to load sidebar:", err));
-}
-
-function fixSidebarLinks() {
-    const links = document.querySelectorAll("#sidebar a");
+document.addEventListener("DOMContentLoaded", () => {
+    const isGitHub = location.hostname.includes("github.io");
     const basePath = isGitHub ? "/meropos-wiki/" : "/";
-    links.forEach(link => {
+
+    document.querySelectorAll("a").forEach(link => {
         const href = link.getAttribute("href");
         if (!href || href.startsWith("http") || href.startsWith("/")) return;
+
         const fixedHref = basePath + href.replace(/^\/+/, "");
         link.setAttribute("href", fixedHref);
     });
-}
-
-function highlightActiveSidebarLink() {
-    const links = document.querySelectorAll("#sidebar a");
-    const currentPath = location.pathname.replace(/\/+$/, "");
-    let matched = false;
-    links.forEach(link => {
-        const linkPath = new URL(link.href).pathname.replace(/\/+$/, "");
-        if (linkPath === currentPath) {
-            link.classList.add("active");
-            matched = true;
-        }
-    });
-    if (!matched && links.length > 0)
-        links[0].classList.add("active");
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    loadSidebar();
 });

@@ -75,45 +75,30 @@ main {
 }
 
 #sidebar nav ul li a {
-    color: var(--color-link);
+    color: var(--sidebar-link-color, var(--color-link));
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 #sidebar nav ul li a:hover {
-    color: var(--color-link-hover);
+    color: var(--sidebar-link-hover-color, var(--color-link-hover));
     text-decoration: underline;
 }
 
 #sidebar nav ul li a.active {
     font-weight: bold;
-    color: var(--color-active);
+    color: var(--sidebar-link-active-color, var(--color-active));
 }
 
-#sidebar .sidebar-inner {
+#sidebar {
+    color: var(--sidebar-text-color, var(--color-text));
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-#sidebar {
-    color: var(--sidebar-text-color, var(--color-text));
-}
-
 #sidebar h1 {
     color: var(--sidebar-heading-color, var(--color-heading));
-}
-
-#sidebar nav ul li a {
-    color: var(--sidebar-link-color, var(--color-link));
-}
-
-#sidebar nav ul li a:hover {
-    color: var(--sidebar-link-hover-color, var(--color-link-hover));
-}
-
-#sidebar nav ul li a.active {
-    color: var(--sidebar-link-active-color, var(--color-active));
 }
 
 main::before {
@@ -126,8 +111,7 @@ main::before {
     z-index: -1;
 }
 
-main h1,
-main h2 {
+main h1 {
     color: var(--color-heading);
     font-family: var(--font-family-heading);
     font-weight: 700;

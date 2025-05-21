@@ -1,3 +1,4 @@
+/*
 const themes = [
     { name: "determination", weight: 1 },
     { name: "bravery", weight: 100 },
@@ -45,3 +46,23 @@ document.write(`<link rel="stylesheet" href="${themePath}">`);
 function capitalize(word) {
     return word.charAt(0).toUpperCase() + word.slice(1);
 }
+*/
+
+
+
+const isGitHub = location.hostname.includes("github.io");
+const isSubpage = location.pathname.includes("/pages/");
+
+// Choose correct base path depending on hosting + directory depth
+const themePrefix = isGitHub
+  ? "/meropos-wiki/css/"
+  : isSubpage
+    ? "../css/"
+    : "css/";
+
+// Always load theme-old.css for testing
+const link = document.createElement("link");
+link.rel = "stylesheet";
+link.href = themePrefix + "theme-default.css";
+
+document.head.appendChild(link);
