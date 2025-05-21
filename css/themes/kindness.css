@@ -1,0 +1,56 @@
+:root {
+    /* Typography */
+    --font-family-body: 'Open Sans', sans-serif;
+    --font-family-heading: 'Open Sans', sans-serif;
+    --font-size-base: 16px;
+
+    /* Colors */
+    --color-bg: #0c150c;
+    --color-text: #dfffe0;
+    --color-heading: #bfffbf;
+    --color-paragraph: #b0e5b0;
+    --color-sidebar-bg: linear-gradient(to bottom, #143d14, #104010);
+    --color-main-bg: linear-gradient(to bottom, #061006, #102110);
+
+    /* Link Colors */
+    --color-link: #8df58d;
+    --color-link-hover: #afffaf;
+    --color-body-link: #b6fcb6;
+    --color-active: #afffaf;
+
+    /* Borders */
+    --color-border: rgba(160, 255, 160, 0.08);
+    --color-divider: rgba(160, 255, 160, 0.2);
+
+    /* Spacing */
+    --space-padding: 30px;
+    --sidebar-width: 250px;
+
+    /* Accents & Interactive */
+    --color-accent-bg: #193519;
+    --color-accent-hover: #225522;
+    --color-accent-border: #85f285;
+    --color-button-text: #e0ffe0;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(100, 255, 100, 0.15);
+    --shadow-md: 0 4px 10px rgba(100, 255, 100, 0.25);
+    --shadow-glow: 0 0 8px rgba(130, 255, 130, 0.3);
+
+    /* Border radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* Z-layers */
+    --z-base: 1;
+    --z-overlay: 10;
+    --z-modal: 100;
+
+    --sidebar-divider-gradient: linear-gradient(to bottom, #8df58d, #bfffbf)
+}

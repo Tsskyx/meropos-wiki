@@ -1,0 +1,54 @@
+:root {
+    /* Typography */
+    --font-family-body: 'Open Sans', sans-serif;
+    --font-family-heading: 'Open Sans', sans-serif;
+    --font-size-base: 16px;
+
+    /* Colors */
+    --color-bg: #0c0f13;
+    --color-text: #e0e0e0;
+    --color-heading: #f0f0f0;
+    --color-paragraph: #d0d0d0;
+    --color-sidebar-bg: linear-gradient(to bottom, #1b1123, #0e1b2e);
+    --color-main-bg: linear-gradient(to bottom, #000000, #121212);
+
+    /* Link Colors */
+    --color-link: #8fbdfb;
+    --color-link-hover: #ff5ca7;
+    --color-body-link: #a0d8ff;
+    --color-active: #ff5ca7;
+
+    /* Borders */
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-divider: rgba(255, 255, 255, 0.15);
+
+    /* Spacing */
+    --space-padding: 30px;
+    --sidebar-width: 250px;
+
+    /* Accents & Interactive */
+    --color-accent-bg: #232a38;
+    --color-accent-hover: #30394a;
+    --color-accent-border: #3a4151;
+    --color-button-text: #e0e0e0;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.2);
+    --shadow-glow: 0 0 8px rgba(255, 92, 167, 0.25);
+
+    /* Border radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* Z-layers */
+    --z-base: 1;
+    --z-overlay: 10;
+    --z-modal: 100;
+}

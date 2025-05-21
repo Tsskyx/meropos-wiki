@@ -1,8 +1,9 @@
+const isGitHub = location.hostname.includes("github.io");
+
 function loadSidebar() {
     const sidebarContainer = document.getElementById("sidebar");
     if (!sidebarContainer) return;
 
-    const isGitHub = location.hostname.includes("github.io");
     const isSubpage = location.pathname.includes("/pages/");
     const sidebarPath = isGitHub
         ? "/meropos-wiki/sidebar.html"
@@ -17,13 +18,13 @@ function loadSidebar() {
         })
         .then(html => {
             sidebarContainer.innerHTML = html;
-            fixSidebarLinks(isGitHub);
+            fixSidebarLinks();
             highlightActiveSidebarLink();
         })
         .catch(err => console.error("Failed to load sidebar:", err));
 }
 
-function fixSidebarLinks(isGitHub) {
+function fixSidebarLinks() {
     const links = document.querySelectorAll("#sidebar a");
     const basePath = isGitHub ? "/meropos-wiki/" : "/";
     links.forEach(link => {
@@ -48,3 +49,7 @@ function highlightActiveSidebarLink() {
     if (!matched && links.length > 0)
         links[0].classList.add("active");
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadSidebar();
+});
