@@ -133,6 +133,11 @@ main a:visited {
     color: var(--color-link-hover);
 }
 
+li.spacer {
+    height: 1em;
+    list-style: none;
+}
+
 @media (max-width: 768px) {
     body {
         flex-direction: column;
