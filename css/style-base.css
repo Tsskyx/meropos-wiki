@@ -1,0 +1,183 @@
+/* global */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--color-bg, #0c0f13);
+    color: var(--color-text, #e0e0e0);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--color-bg, #0c0f13);
+    color: var(--color-text, #e0e0e0);
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* main and footer */
+
+#page-article {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #000000, #121212);
+    color: var(--color-paragraph, #d0d0d0);
+    overflow: hidden;
+}
+
+#article-inject {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 48px 64px;
+}
+
+#article-inject h1 {
+    color: var(--color-heading, #f0f0f0);
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 6px rgba(255, 92, 167, 0.25);
+}
+
+#article-inject a {
+    color: var(--color-body-link, #a0d8ff);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+#article-inject a:hover,
+#article-inject a:focus {
+    color: var(--color-link-hover, #ff5ca7);
+    outline: none;
+}
+
+#page-footer {
+    flex-shrink: 0;
+    width: 100%;
+    background-color: var(--color-accent-bg, #232a38);
+    color: var(--color-text, #e0e0e0);
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 0.5em 0;
+    border-top: 1px solid var(--color-divider, rgba(255,255,255,0.15));
+    user-select: none;
+    box-shadow: inset 0 1px 0 rgba(255 255 255 / 0.05);
+}
+
+/* sidebar */
+
+#page-sidebar {
+    width: 250px;
+    background: linear-gradient(to bottom, #1b1123, #0e1b2e);
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-text);
+}
+
+#sidebar-header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 2rem 0;
+    letter-spacing: 1.2px;
+    color: var(--color-heading, #f0f0f0);
+    text-shadow: 0 0 6px rgba(255, 92, 167, 0.35);
+}
+
+.sidebar-divider {
+    margin: 0.5rem;
+    border: none;
+    border-top: 1px solid var(--color-divider, rgba(255,255,255,0.15));
+    opacity: 0.3;
+}
+
+#sidebar-nav-inject {
+    margin-top: 0.75rem;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+#sidebar-nav-inject ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#sidebar-nav-inject li + li {
+    margin-top: 0.25rem;
+}
+
+#sidebar-nav-inject a {
+    display: block;
+    width: 100%;
+    padding: 0.75em 0.75em;
+    color: var(--sidebar-link, #a5f0ff);
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+#sidebar-nav-inject a:hover,
+#sidebar-nav-inject a:focus {
+    background-color: var(--sidebar-link-bg-hover, rgba(255, 255, 255, 0.05));
+    color: var(--sidebar-link-hover, #ff82c3);
+    outline: none;
+}
+
+/* navigation buttons */
+
+#nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin: 0.75rem 0;
+}
+
+#button-home,
+#button-back {
+    flex: 1;
+    padding: 0.5em 0.75em;
+    background-color: var(--sidebar-link-bg-hover);
+    border: 1px solid var(--divider);
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text);
+    cursor: pointer;
+    transition: background-color var(--transition-fast),
+                border-color var(--transition-fast),
+                color var(--transition-fast),
+                transform var(--transition-fast);
+    text-align: center;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+#button-home:hover,
+#button-back:hover {
+    background-color: var(--sidebar-link-bg-hover);
+    border-color: var(--sidebar-link-hover);
+    color: var(--sidebar-link-hover);
+    outline: none;
+}
+
+#button-home:active,
+#button-back:active {
+    transform: scale(0.97);
+    filter: brightness(1.2);
+    box-shadow: inset 0 0 4px rgba(255, 92, 167, 0.2);
+}

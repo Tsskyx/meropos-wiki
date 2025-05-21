@@ -49,7 +49,7 @@ function capitalize(word) {
 */
 
 
-
+/*
 const isGitHub = location.hostname.includes("github.io");
 const isSubpage = location.pathname.includes("/pages/");
 
@@ -66,3 +66,4 @@ link.rel = "stylesheet";
 link.href = themePrefix + "theme-default.css";
 
 document.head.appendChild(link);
+*/

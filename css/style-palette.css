@@ -1,0 +1,31 @@
+:root {
+    /* === Base Colors === */
+    --color-bg: #111016;
+    --color-text: #f2f2f2;
+    --color-paragraph: #dcdcdc;
+    --color-heading: #ffc7ff;
+
+    /* === Title & Heading Glow === */
+    --color-title: #e88fff;
+    --color-title-glow: 0 0 6px rgba(232, 143, 255, 0.35);
+    --color-heading-glow: 0 0 6px rgba(130, 255, 255, 0.25);
+
+    /* === Link Colors === */
+    --color-body-link: #82ffff;
+    --color-link-hover: #ff66d8;
+    --color-link: #a5f0ff;
+
+    /* === Sidebar === */
+    --color-accent-bg: #1f1b2f;
+    --color-divider: rgba(255, 255, 255, 0.12);
+    --sidebar-link: #a5f0ff;
+    --sidebar-link-hover: #ff82c3;
+    --sidebar-link-bg-hover: rgba(255, 255, 255, 0.07);
+    --sidebar-shadow: 4px 0 12px rgba(0, 0, 0, 0.5);
+
+    /* === Footer === */
+    --color-footer-text: #999;
+
+    /* === Transitions === */
+    --transition-fast: 0.25s ease;
+}
