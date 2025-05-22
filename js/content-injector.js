@@ -1,4 +1,5 @@
 function injectContentFrom(page) {
+    const headerInjectPoint = document.getElementById("header-inject");
     const articleInjectPoint = document.getElementById("article-inject");
     const sidenavInjectPoint = document.getElementById("sidebar-nav-inject");
 
@@ -15,6 +16,10 @@ function injectContentFrom(page) {
             const getTitle = tempElem.querySelector("#content-title");
             document.title = getTitle ? getTitle.textContent.trim() : "Meropos wiki";
 
+            // === Header ===
+            const getHeader = tempElem.querySelector("#content-header");
+            headerInjectPoint.innerHTML = getHeader ? getHeader.innerHTML : "Page Not Found";
+
             // === Main ===
             const getArticle = tempElem.querySelector("#content-article");
             articleInjectPoint.innerHTML = getArticle ? getArticle.innerHTML : "<p>Missing article content.</p>";
@@ -26,7 +31,7 @@ function injectContentFrom(page) {
         .catch(error => {
             console.error(error);
             document.title = "Page Not Found";
-            articleInjectPoint.innerHTML = `<h1>Page Not Found</h1><p>The page "<b>${page}</b>" could not be found.</p>`;
+            articleInjectPoint.innerHTML = `<p>The page "<b>${page}</b>" could not be found.</p>`;
             sidenavInjectPoint.innerHTML = `<p>No sidebar available.</p>`;
         });
 }

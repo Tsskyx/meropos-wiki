@@ -1,56 +1,42 @@
 :root {
-    /* Typography */
-    --font-family-body: 'Open Sans', sans-serif;
-    --font-family-heading: 'Open Sans', sans-serif;
-    --font-size-base: 16px;
+    /* === Base Colors === */
+    --color-bg: #071015;
+    --color-text: #d8f9ff;
+    --color-paragraph: #a6dbe2;
+    --color-heading: #e2fcff;
 
-    /* Colors */
-    --color-bg: #0a1318;
-    --color-text: #def3fa;
-    --color-heading: #c0ecff;
-    --color-paragraph: #afd8ea;
-    --color-sidebar-bg: linear-gradient(to bottom, #122c3c, #0e2a38);
-    --color-main-bg: linear-gradient(to bottom, #07141c, #0e2333);
+    /* === Title & Glow === */
+    --color-title: #5fd9e8;
+    --color-title-glow: 0 0 6px rgba(95, 217, 232, 0.4);
+    --color-heading-glow: 0 0 6px rgba(100, 255, 255, 0.5);
 
-    /* Link Colors */
-    --color-link: #7cd0ff;
-    --color-link-hover: #a6e9ff;
-    --color-body-link: #b8f0ff;
-    --color-active: #a0e0ff;
+    /* === Links === */
+    --color-body-link: #6fdfff;
+    --color-link-hover: #3ed0e5;
+    --color-link: #98f2ff;
 
-    /* Borders */
-    --color-border: rgba(180, 230, 255, 0.08);
-    --color-divider: rgba(180, 230, 255, 0.2);
+    /* === Sidebar === */
+    --color-accent-bg: #0c1b22;
+    --color-divider: rgba(170, 240, 255, 0.2);
+    --sidebar-link: #b3f5ff;
+    --sidebar-link-hover: #3ed0e5;
+    --sidebar-link-bg-hover: rgba(140, 240, 255, 0.08);
+    --sidebar-shadow: 6px 0 18px rgba(90, 220, 255, 0.15);
+    --sidebar-divider: rgba(160, 230, 255, 0.3);
+    --sidebar-divider-glow: 0 0 4px rgba(110, 240, 255, 0.1);
 
-    /* Spacing */
-    --space-padding: 30px;
-    --sidebar-width: 250px;
+    /* === Glow and Border Effects === */
+    --box-glow: 0 0 40px rgba(80, 210, 255, 0.08);
+    --inner-box-glow: inset 0 0 12px rgba(80, 210, 255, 0.05);
+    --border-strong: 3px double var(--color-divider);
+    --border-light: 1px solid var(--color-divider);
+    --divider-glow: 0 0 3px var(--color-divider);
 
-    /* Accents & Interactive */
-    --color-accent-bg: #183044;
-    --color-accent-hover: #204c68;
-    --color-accent-border: #7cd0ff;
-    --color-button-text: #e0f8ff;
-
-    /* Shadows */
-    --shadow-sm: 0 1px 3px rgba(140, 210, 255, 0.15);
-    --shadow-md: 0 4px 10px rgba(140, 210, 255, 0.25);
-    --shadow-glow: 0 0 8px rgba(140, 220, 255, 0.3);
-
-    /* Border radius */
-    --radius-sm: 4px;
-    --radius-md: 8px;
-    --radius-lg: 12px;
-
-    /* Transitions */
+    /* === Other === */
+    --color-footer-text: #a5cbd1;
     --transition-fast: 0.2s ease;
-    --transition-medium: 0.3s ease;
-    --transition-slow: 0.5s ease;
-
-    /* Z-layers */
-    --z-base: 1;
-    --z-overlay: 10;
-    --z-modal: 100;
-
-    --sidebar-divider-gradient: linear-gradient(to bottom, #7cd0ff, #a6e9ff)
+    --theme-base-panel: rgba(15, 30, 40, 0.9);
+    --theme-gradient-top: #102933;
+    --theme-gradient-bottom: #081e28;
+    --button-press-glow: rgba(60, 200, 240, 0.2);
 }

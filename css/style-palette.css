@@ -1,31 +1,44 @@
 :root {
     /* === Base Colors === */
-    --color-bg: #111016;
-    --color-text: #f2f2f2;
-    --color-paragraph: #dcdcdc;
-    --color-heading: #ffc7ff;
+    --color-bg: #2c2c2c;
+    --color-text: #2a2a2a;
+    --color-paragraph: #dfe4ea;
+    --color-heading: #3c3c3c;
 
-    /* === Title & Heading Glow === */
-    --color-title: #e88fff;
-    --color-title-glow: 0 0 6px rgba(232, 143, 255, 0.35);
-    --color-heading-glow: 0 0 6px rgba(130, 255, 255, 0.25);
+    /* === Title & Glow === */
+    --color-title: #3c3c3c;
+    --color-title-glow: 0 0 8px rgba(220, 230, 255, 0.08);
+    --color-heading-glow: 0 0 6px rgba(200, 210, 230, 0.05);
 
-    /* === Link Colors === */
-    --color-body-link: #82ffff;
-    --color-link-hover: #ff66d8;
-    --color-link: #a5f0ff;
+    /* === Links === */
+    --color-body-link: #b3b5b8;
+    --color-link-hover: #ffffff;
+    --color-link: #f0f0f3;
 
-    /* === Sidebar === */
-    --color-accent-bg: #1f1b2f;
-    --color-divider: rgba(255, 255, 255, 0.12);
-    --sidebar-link: #a5f0ff;
-    --sidebar-link-hover: #ff82c3;
-    --sidebar-link-bg-hover: rgba(255, 255, 255, 0.07);
-    --sidebar-shadow: 4px 0 12px rgba(0, 0, 0, 0.5);
+    /* === Sidebar, Header, Footer === */
+    --theme-gradient-top: #d0d2d5;
+    --theme-gradient-bottom: #888c93;
+    --color-accent-bg: #999da1;
+    --color-accent-header-bg: #b4b7bb;
+    --color-accent-footer-bg: #b4b7bb;
 
-    /* === Footer === */
-    --color-footer-text: #999;
+    --sidebar-link: #1f1f1f;
+    --sidebar-link-hover: #ffffff;
+    --sidebar-link-bg-hover: rgba(230, 230, 230, 0.25);
+    --sidebar-divider: rgba(0, 0, 0, 0.25);
+    --sidebar-divider-glow: 0 0 4px rgba(180, 190, 200, 0.06);
+    --sidebar-shadow: 6px 0 18px rgba(80, 80, 90, 0.04);
 
-    /* === Transitions === */
-    --transition-fast: 0.25s ease;
+    /* === Glow and Border Effects === */
+    --box-glow: 0 0 40px rgba(220, 230, 255, 0.05);
+    --inner-box-glow: inset 0 0 12px rgba(240, 245, 255, 0.03);
+    --border-strong: 3px double var(--sidebar-divider);
+    --border-light: 1px solid var(--sidebar-divider);
+    --divider-glow: 0 0 3px var(--sidebar-divider);
+
+    /* === Other === */
+    --color-footer-text: #3c3c3c;
+    --transition-fast: 0.2s ease;
+    --theme-base-panel: rgba(80, 82, 85, 0.97);
+    --button-press-glow: rgba(220, 230, 255, 0.1);
 }

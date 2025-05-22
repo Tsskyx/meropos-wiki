@@ -1,56 +1,42 @@
 :root {
-    /* Typography */
-    --font-family-body: 'Open Sans', sans-serif;
-    --font-family-heading: 'Open Sans', sans-serif;
-    --font-size-base: 16px;
+    /* === Base Colors === */
+    --color-bg: #0b0a12;
+    --color-text: #e4dffa;
+    --color-paragraph: #c6bfe4;
+    --color-heading: #f3e7ff;
 
-    /* Colors */
-    --color-bg: #150b1f;
-    --color-text: #e3d4f5;
-    --color-heading: #f0e0ff;
-    --color-paragraph: #d4bff0;
-    --color-sidebar-bg: linear-gradient(to bottom, #2e1a44, #1e1130);
-    --color-main-bg: linear-gradient(to bottom, #0e0817, #1a1025);
+    /* === Title & Glow === */
+    --color-title: #b98ae0;
+    --color-title-glow: 0 0 6px rgba(185, 138, 224, 0.35);
+    --color-heading-glow: 0 0 6px rgba(176, 128, 255, 1);
 
-    /* Link Colors */
-    --color-link: #c287ff;
-    --color-link-hover: #df9cff;
-    --color-body-link: #e7b4ff;
-    --color-active: #d48eff;
+    /* === Links === */
+    --color-body-link: #c4a9ff;
+    --color-link-hover: #e38dff;
+    --color-link: #d6b8ff;
 
-    /* Borders */
-    --color-border: rgba(210, 150, 255, 0.08);
-    --color-divider: rgba(210, 150, 255, 0.2);
+    /* === Sidebar === */
+    --color-accent-bg: #1a1424;
+    --color-divider: rgba(210, 190, 255, 0.18);
+    --sidebar-link: #dacdfc;
+    --sidebar-link-hover: #e38dff;
+    --sidebar-link-bg-hover: rgba(220, 180, 255, 0.08);
+    --sidebar-shadow: 6px 0 18px rgba(180, 120, 255, 0.15);
+    --sidebar-divider: rgba(210, 190, 255, 0.3);
+    --sidebar-divider-glow: 0 0 4px rgba(180, 140, 255, 0.1);
 
-    /* Spacing */
-    --space-padding: 30px;
-    --sidebar-width: 250px;
+    /* === Glow and Border Effects === */
+    --box-glow: 0 0 40px rgba(180, 120, 255, 0.08);
+    --inner-box-glow: inset 0 0 12px rgba(180, 120, 255, 0.05);
+    --border-strong: 3px double var(--color-divider);
+    --border-light: 1px solid var(--color-divider);
+    --divider-glow: 0 0 3px var(--color-divider);
 
-    /* Accents & Interactive */
-    --color-accent-bg: #2a1e3e;
-    --color-accent-hover: #3a2a56;
-    --color-accent-border: #c287ff;
-    --color-button-text: #f6e8ff;
-
-    /* Shadows */
-    --shadow-sm: 0 1px 3px rgba(180, 120, 255, 0.15);
-    --shadow-md: 0 4px 10px rgba(180, 120, 255, 0.25);
-    --shadow-glow: 0 0 8px rgba(200, 140, 255, 0.3);
-
-    /* Border radius */
-    --radius-sm: 4px;
-    --radius-md: 8px;
-    --radius-lg: 12px;
-
-    /* Transitions */
+    /* === Other === */
+    --color-footer-text: #b2a2cc;
     --transition-fast: 0.2s ease;
-    --transition-medium: 0.3s ease;
-    --transition-slow: 0.5s ease;
-
-    /* Z-layers */
-    --z-base: 1;
-    --z-overlay: 10;
-    --z-modal: 100;
-
-    --sidebar-divider-gradient: linear-gradient(to bottom, #c287ff, #df9cff)
+    --theme-base-panel: rgba(40, 25, 60, 0.9);
+    --theme-gradient-top: #22182f;
+    --theme-gradient-bottom: #180f25;
+    --button-press-glow: rgba(220, 130, 255, 0.2);
 }
