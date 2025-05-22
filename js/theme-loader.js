@@ -22,7 +22,7 @@
 
 
     const isGitHub = location.hostname.includes("github.io");
-    const base = isGitHub ? `/meropos-wiki/` : "../";
+    const base = isGitHub ? `/meropos-wiki/` : "";
 
     let selectedTheme = localStorage.getItem("selectedTheme");
     if (!selectedTheme) {

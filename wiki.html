@@ -7,8 +7,14 @@
         <!-- content will be injected here -->
     </title>
 
-    <link rel="stylesheet" href="/meropos-wiki/css/style-base.css">
-    <script src="/meropos-wiki/js/theme-loader.js"></script>
+    <script>
+        const isGitHub = location.hostname.includes("github.io");
+        const basePath = isGitHub ? `/meropos-wiki/` : "";
+        document.write(`<base href="${basePath}">`);
+    </script>
+
+    <link rel="stylesheet" href="css/style-base.css">
+    <script src="js/theme-loader.js"></script>
 </head>
 
 <body>

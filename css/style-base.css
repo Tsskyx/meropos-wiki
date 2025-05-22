@@ -174,7 +174,7 @@ body {
     border: var(--border-light);
     box-shadow: var(--inner-box-glow);
     position: relative;
-    background: url('/assets/backgrounds/souls.png') repeat, rgba(0, 0, 0, 0.85);
+    background: url('../assets/backgrounds/souls.png') repeat, rgba(0, 0, 0, 0.85);
     background-blend-mode: multiply;
     background-size: auto;
 }
