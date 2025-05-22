@@ -20,6 +20,10 @@
         }
     }
 
+
+    const isGitHub = location.hostname.includes("github.io");
+    const base = isGitHub ? `/meropos-wiki/` : "../";
+
     let selectedTheme = localStorage.getItem("selectedTheme");
     if (!selectedTheme) {
         selectedTheme = weightedRandom(themes);
@@ -28,12 +32,12 @@
 
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = `../css/themes/${selectedTheme}.css`;
+    link.href = `${base}css/themes/${selectedTheme}.css`;
     document.head.appendChild(link);
 
     const favicon = document.createElement("link");
     favicon.rel = "icon";
     favicon.type = "image/x-icon";
-    favicon.href = `../assets/favicons/${selectedTheme}.ico`;
+    favicon.href = `${base}assets/favicons/${selectedTheme}.ico`;
     document.head.appendChild(favicon);
 })();
